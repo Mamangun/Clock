@@ -1,0 +1,130 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+    color: #100e1d;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #35cae4;
+    overflow: hidden;
+}
+
+.container{
+    position:relative;
+    margin-left: 2%;
+
+    
+}
+
+.clock{
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    background-color: rgba(129, 160, 230, 0.377);
+    border: 2px solid rgba(58, 11, 11, 0.548);
+    box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.9);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.clock span{
+    position: absolute;
+    transform: rotate(calc(30deg * var(--i))); 
+    inset: 12px;
+    text-align: center;
+}
+
+.clock span b{
+    transform: rotate(calc(-30deg * var(--i)));
+    display: inline-block;
+    font-size: 20px;
+}
+
+.clock::before{
+    content: '';
+    position: absolute;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background-color: #fff;
+    z-index: 2;
+}
+h3{
+  margin-top: 30%;
+  color: #fff;
+  padding: 7px 5px;
+  box-shadow: 1px 1px 20px rgba(15, 25, 37, 0.767);
+  background: #151a209f;
+  
+}
+
+.hand{
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+}
+.hand i{
+    position: absolute;
+    background-color: var(--clr);
+    width: 4px;
+    height: var(--h);
+    border-radius: 8px;
+}
+.wrapper .content{
+  width: 100%;
+  position: absolute;
+  top: 73%;
+  width: 22%;
+  text-align: center;
+  margin-left: 3%;
+  font-size: 18px;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  }
+  .content.disable{
+    cursor: no-drop;
+  }
+  .content .column{
+    padding: 0 10px;
+    border-radius: 5px;
+    border: 1.5px solid #123a69;
+    margin-top: 4px;
+    width: calc(100% /4px);
+  }
+  .content.disable .column{
+    opacity: 0.5;
+    pointer-events: none;
+  }
+  .column select{
+    width: 100%;
+    height: 50px;
+    border: none;
+    outline: none;
+    background: none;
+    font-size: 19px;
+  }
+  .wrapper button{
+    margin-top: 20px;
+    width: 22.3%;
+    border: none;
+    outline: none;
+    color: #fff;
+    position: absolute;
+    top: 80%;
+    margin-left: 3%;
+    text-align: center;
+    font-size: 18px;
+    cursor: pointer;
+    padding: 17px 0;
+    border-radius: 10px;
+    background: #123a69;
+  }
